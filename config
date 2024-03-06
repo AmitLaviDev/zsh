@@ -1,0 +1,81 @@
+#homebrew install
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+#iTerm2 install
+brew cask install iterm2
+
+#install zsh
+brew install zsh
+
+#install Oh My zsh!
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+#upgrade Oh My zsh!
+upgrade_oh_my_zsh
+
+#add zsh plugins
+plugins=(
+    git
+    kubectl
+    vscode
+    )
+
+#add git improve
+# === EMOJI LOGS === #
+#.# Better Git Logs.
+### Using EMOJI-LOG (https://github.com/ahmadawais/Emoji-Log).
+
+# Git Commit, Add all and Push — in one step.
+gcap() {
+  if [[ $# -lt 2 ]]; then
+    echo >&2 "Commit message is too short..., please provide a better one"
+  else
+    git add . && git commit -m "$*" && git push
+  fi
+}
+
+# NEW.
+gnew() {
+  gcap "📦 NEW: $@"
+}
+
+# IMPROVE.
+gimp() {
+  gcap "👌 IMPROVE: $@"
+}
+
+# FIX.
+gfix() {
+  gcap "🐛 FIX: $@"
+}
+
+# RELEASE.
+grlz() {
+  gcap "🚀 RELEASE: $@"
+}
+
+# DOC.
+gdoc() {
+  gcap "📖 DOC: $@"
+}
+
+# TEST.
+gtst() {
+  gcap "🤖 TEST: $@"
+}
+
+# BREAKING CHANGE.
+gbrk() {
+  gcap "‼️ BREAKING: $@"
+}
+gt() {
+  NORMAL='\033[0;39m'
+  GREEN='\033[0;32m'
+  echo "$GREEN gnew$NORMAL — 📦 NEW
+$GREEN gimp$NORMAL — 👌 IMPROVE
+$GREEN gfix$NORMAL — 🐛 FIX
+$GREEN grlz$NORMAL — 🚀 RELEASE
+$GREEN gdoc$NORMAL — 📖 DOC
+$GREEN gtst$NORMAL — 🧪️ TEST
+$GREEN gbrk$NORMAL — ‼️ BREAKING"
+}
