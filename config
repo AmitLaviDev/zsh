@@ -169,6 +169,8 @@ source $ZSH/oh-my-zsh.sh
  alias awsedit="code ~/.aws/credentials ~/.aws/config"
  alias update="omz update"
  alias gitcoms="alias | grep git"
+ eval $(thefuck --alias)
+
 #  alias python="python3"
 #  alias pip="pip3"
 
@@ -181,4 +183,5 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 
