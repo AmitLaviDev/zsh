@@ -83,7 +83,7 @@ plugins=(vscode git zsh-autosuggestions zsh-syntax-highlighting python you-shoul
 #.# Better Git Logs.
 ### Using EMOJI-LOG (https://github.com/ahmadawais/Emoji-Log).
 
-# Git Commit, Add all and Push — in one step.
+# Git Push with emojis — in one step.
 gcap() {
   if [[ $# -lt 2 ]]; then
     echo >&2 "Commit message is too short..., please provide a better one"
@@ -169,19 +169,19 @@ source $ZSH/oh-my-zsh.sh
  alias awsedit="code ~/.aws/credentials ~/.aws/config"
  alias update="omz update"
  alias gitcoms="alias | grep git"
- eval $(thefuck --alias)
-
+ alias docker="podman"
 #  alias python="python3"
 #  alias pip="pip3"
 
-# AWS SSO with GRANTED/ASSUME
+# === AWS SSO with GRANTED/ASSUME === #
  alias sso-login='granted sso login --sso-region il-central-1 --sso-start-url https://digital-lz-il.awsapps.com/start'
  alias sso-profile-update='if [ ! -d $HOME/.aws ]; then mkdir $HOME/.aws; fi; granted sso populate --prune --sso-region il-central-1 https://digital-lz-il.awsapps.com/start'
- alias sso-connect='source assume && export AWS_ACCOUNT_ID=$(aws sts get-caller-identity | jq -r .Account)'
- alias sso-connect-gui='source assume -c && export AWS_ACCOUNT_ID=$(aws sts get-caller-identity | jq -r .Account)'
+ alias sso-connect='source assume -x'
+ alias sso-connect-gui='source assume -c -x'
  alias assume="source assume"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
+eval $(thefuck --alias)
