@@ -72,12 +72,15 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+
+# ====== Plugins ====== #
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vscode git zsh-autosuggestions zsh-syntax-highlighting python you-should-use zsh-bat terraform)
+plugins=(vscode git zsh-autosuggestions zsh-syntax-highlighting python you-should-use zsh-bat terraform common-aliases)
 
 # === EMOJI LOGS === #
 #.# Better Git Logs.
@@ -166,7 +169,7 @@ source $ZSH/oh-my-zsh.sh
  alias ohmyu="source ~/.zshrc"
  alias ohmy="code ~/.zshrc"
  alias ipa="ip a | grep "inet ""
- alias awsedit="code ~/.aws/credentials ~/.aws/config"
+ alias awsiden="code ~/.aws/credentials ~/.aws/config"
  alias update="omz update"
  alias gitcoms="alias | grep git"
  alias docker="podman"
@@ -185,3 +188,6 @@ source $ZSH/oh-my-zsh.sh
 
 
 eval $(thefuck --alias)
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terragrunt terragrunt
