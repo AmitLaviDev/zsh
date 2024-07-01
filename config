@@ -80,7 +80,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vscode git zsh-autosuggestions zsh-syntax-highlighting python you-should-use zsh-bat terraform common-aliases)
+plugins=(vscode git zsh-syntax-highlighting python you-should-use zsh-bat terraform common-aliases)
 
 # === EMOJI LOGS === #
 #.# Better Git Logs.
@@ -173,16 +173,19 @@ source $ZSH/oh-my-zsh.sh
  alias update="omz update"
  alias gitcoms="alias | grep git"
  alias docker="podman"
-#  alias python="python3"
-#  alias pip="pip3"
+ alias tfdocs="terraform-docs"
+ alias python="python3"
+ alias pip="pip3"
 
 # === AWS SSO with GRANTED/ASSUME === #
- alias sso-login='granted sso login --sso-region il-central-1 --sso-start-url https://digital-lz-il.awsapps.com/start'
- alias sso-profile-update='if [ ! -d $HOME/.aws ]; then mkdir $HOME/.aws; fi; granted sso populate --prune --sso-region il-central-1 https://digital-lz-il.awsapps.com/start'
+ alias sso-login-committee='granted sso login --sso-region il-central-1 --sso-start-url https://digital-lz-il.awsapps.com/start'
+ alias sso-profile-update-committee='if [ ! -d $HOME/.aws ]; then mkdir $HOME/.aws; fi; granted sso populate --prune --sso-region il-central-1 https://digital-lz-il.awsapps.com/start'
+ alias sso-login-kyndryl='granted sso login --sso-region us-east-1 --sso-start-url https://kyndryl-aws-sso.awsapps.com/start'
+ alias sso-profile-update-kyndryl='if [ ! -d $HOME/.aws ]; then mkdir $HOME/.aws; fi; granted sso populate --prune --sso-region us-east-1 https://kyndryl-aws-sso.awsapps.com/start'
  alias sso-connect='source assume -x'
  alias sso-connect-gui='source assume -c -x'
  alias assume="source assume"
-
+ 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -191,3 +194,6 @@ eval $(thefuck --alias)
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terragrunt terragrunt
+
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /Users/amitlavi/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
