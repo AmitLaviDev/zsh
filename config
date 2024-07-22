@@ -165,6 +165,11 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+# ====== Languege ====== #
+ export LC_ALL=en_US.UTF-8
+ export LANG=en_US.UTF-8
+
+
 # ====== Aliases ====== #
  alias ohmyu="source ~/.zshrc"
  alias ohmy="code ~/.zshrc"
