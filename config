@@ -191,6 +191,8 @@ source $ZSH/oh-my-zsh.sh
  alias sso-connect-gui='source assume -c -x'
  alias assume="source assume"
  alias upgrade="brew upgrade"
+ alias tffu="terraform force-unlock"
+
  
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
