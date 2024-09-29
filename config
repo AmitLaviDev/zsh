@@ -80,7 +80,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vscode git zsh-syntax-highlighting python you-should-use zsh-bat terraform common-aliases)
+plugins=(vscode git zsh-syntax-highlighting python you-should-use zsh-bat terraform common-aliases kubectl)
 
 # === EMOJI LOGS === #
 #.# Better Git Logs.
@@ -192,6 +192,8 @@ source $ZSH/oh-my-zsh.sh
  alias assume="source assume"
  alias upgrade="brew upgrade"
  alias tffu="terraform force-unlock"
+ alias tfsrm="terraform state rm"
+ alias tfsl="terraform state list"
 
  
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
