@@ -80,7 +80,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vscode git zsh-syntax-highlighting python you-should-use zsh-bat terraform common-aliases kubectl)
+plugins=(vscode git zsh-syntax-highlighting python you-should-use zsh-bat common-aliases kubectl opentofu)
 
 # === EMOJI LOGS === #
 #.# Better Git Logs.
@@ -91,7 +91,7 @@ gcap() {
   if [[ $# -lt 2 ]]; then
     echo >&2 "Commit message is too short..., please provide a better one"
   else
-    git commit -m "$*" && git push
+    git add --all && git commit -m "$*" && git push
   fi
 }
 
@@ -192,13 +192,37 @@ source <(kubectl completion zsh)
  alias sso-connect-gui='source assume -c -x'
  alias assume="source assume"
  alias upgrade="brew upgrade"
- alias tffu="terraform force-unlock"
- alias tfsrm="terraform state rm"
- alias tfsl="terraform state list"
+ alias tffu="tofu force-unlock"
+ alias tfsrm="tofu state rm"
+ alias tfsl="tofu state list"
  alias vtl="vault token list"
  alias c="clear"
+ alias wkgp="watch -n0.1 kubectl get pod"
+ alias wkgn="watch -n0.1 kubectl get node"
+ alias wkgs="watch -n0.1 kubectl get svc"
 
- 
+# === Terraform - OpenTofu === #
+alias tf='tofu'
+alias tfa='tofu apply'
+alias tfaa='tofu apply -auto-approve'
+alias tfc='tofu console'
+alias tfd='tofu destroy'
+alias 'tfd!'='tofu destroy -auto-approve'
+alias tff='tofu fmt'
+alias tffr='tofu fmt -recursive'
+alias tfu='tofu force-unlock'
+alias tfi='tofu init'
+alias tfo='tofu output'
+alias tfp='tofu plan'
+alias tfr='tofu refresh'
+alias tfs='tofu state'
+alias tfsh='tofu show'
+alias tfsl='tofu state list'
+alias tfsrm='tofu state rm'
+alias tft='tofu test'
+alias tfv='tofu validate'
+alias tfws='tofu workspace'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
