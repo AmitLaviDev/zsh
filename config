@@ -7,7 +7,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$HOME/.krew/bin:$PATH
-
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -202,6 +202,7 @@ source <(kubectl completion zsh)
  alias wkgs="watch -n0.1 kubectl get svc"
  alias kcv="kubectl config view"
  alias krew="kubectl krew"
+ alias stern="kubectl stern"
 
 # === OpenTofu === #
 alias tf='tofu'
