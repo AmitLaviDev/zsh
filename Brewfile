@@ -1,94 +1,164 @@
-tap "common-fate/granted"
-tap "hashicorp/tap"
-tap "homebrew/bundle"
-tap "homebrew/command-not-found"
-brew "webp"
-brew "ca-certificates"
-brew "openssl@3"
-brew "aws-cdk"
-brew "python@3.12"
-brew "awscli"
-brew "bat"
-brew "black"
-brew "cdk"
-brew "cf2tf"
-brew "colima"
-brew "commandbox"
-brew "curl"
-brew "file-formula"
-brew "fortune"
-brew "git"
-brew "git-remote-codecommit"
-brew "go-task"
-brew "htop"
-brew "iproute2mac"
-brew "jid"
-brew "jq"
-brew "kubernetes-cli"
-brew "n"
-brew "php"
-brew "podman"
-brew "pyenv"
-brew "pyenv-virtualenv"
-brew "pygments"
-brew "tcl-tk"
-brew "python-tk@3.12"
-brew "rain"
-brew "switchaudio-osx"
-brew "terraform-docs"
-brew "terragrunt"
-brew "thefuck"
-brew "virtualenv"
-brew "yq"
-brew "zbar"
-brew "zsh-autosuggestions"
-brew "common-fate/granted/granted"
-brew "hashicorp/tap/terraform"
-cask "anki"
-cask "chatgpt"
-cask "commandpost"
-cask "firefox"
-cask "klatexformula"
-cask "mark-text"
-cask "vlc"
-vscode "amazonwebservices.amazon-q-vscode"
-vscode "amazonwebservices.aws-toolkit-vscode"
-vscode "aws-scripting-guy.cform"
-vscode "batisteo.vscode-django"
-vscode "bierner.github-markdown-preview"
-vscode "bierner.markdown-checkbox"
-vscode "bierner.markdown-emoji"
-vscode "bierner.markdown-footnotes"
-vscode "bierner.markdown-mermaid"
-vscode "bierner.markdown-preview-github-styles"
-vscode "bierner.markdown-yaml-preamble"
-vscode "davidanson.vscode-markdownlint"
-vscode "donjayamanne.python-environment-manager"
-vscode "donjayamanne.python-extension-pack"
-vscode "eamodio.gitlens"
-vscode "github.copilot"
-vscode "github.copilot-chat"
-vscode "github.vscode-pull-request-github"
-vscode "hashicorp.terraform"
-vscode "infracost.infracost"
-vscode "kevinrose.vsc-python-indent"
-vscode "mdickin.markdown-shortcuts"
-vscode "ms-azuretools.vscode-docker"
-vscode "ms-python.black-formatter"
-vscode "ms-python.debugpy"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "njpwerner.autodocstring"
-vscode "pkief.material-icon-theme"
-vscode "redhat.vscode-yaml"
-vscode "steefh.terraform-documentation-links"
-vscode "task.vscode-task"
-vscode "tomoki1207.pdf"
-vscode "usernamehw.errorlens"
-vscode "visualstudioexptteam.intellicode-api-usage-examples"
-vscode "visualstudioexptteam.vscodeintellicode"
-vscode "wholroyd.jinja"
-vscode "yutengjing.open-in-external-app"
-vscode "yzane.markdown-pdf"
-vscode "yzhang.markdown-all-in-one"
-vscode "zainchen.json"
+aom
+apr
+apr-util
+argon2
+aspell
+autoconf
+aws-cdk
+awscli
+bat
+black
+brotli
+c-ares
+ca-certificates
+cairo
+capstone
+cdk
+certifi
+cf2tf
+cffi
+colima
+commandbox
+coreutils
+cryptography
+curl
+dtc
+eksctl
+file-formula
+fontconfig
+fortune
+freetds
+freetype
+fribidi
+gd
+gettext
+ghostscript
+giflib
+git
+git-remote-codecommit
+glib
+gmp
+gnutls
+go-task
+granted
+graphite2
+harfbuzz
+helm
+helmify
+highway
+htop
+icu4c
+icu4c@75
+imagemagick
+imath
+iproute2mac
+jasper
+jbig2dec
+jid
+jpeg-turbo
+jpeg-xl
+jq
+k9s
+kn
+krb5
+krew
+kubectx
+kubernetes-cli
+leptonica
+libarchive
+libavif
+libb2
+libde265
+libdeflate
+libevent
+libgit2@1.7
+libheif
+libidn
+libidn2
+liblqr
+libmagic
+libnghttp2
+libomp
+libpng
+libpq
+libraw
+libslirp
+libsodium
+libssh
+libssh2
+libtasn1
+libtiff
+libtool
+libunistring
+libusb
+libuv
+libvmaf
+libx11
+libxau
+libxcb
+libxdmcp
+libxext
+libxrender
+libyaml
+libzip
+lima
+little-cms2
+lz4
+lzo
+m4
+mpdecimal
+n
+ncurses
+nettle
+node
+oniguruma
+openexr
+openjdk
+openjpeg
+openldap
+openssl@3
+opentofu
+p11-kit
+pango
+pcre2
+php
+pixman
+pkg-config
+podman
+pycparser
+pyenv
+pyenv-virtualenv
+pygments
+python-packaging
+python-tk@3.12
+python@3.12
+python@3.13
+qemu
+rain
+readline
+rtmpdump
+shared-mime-info
+snappy
+sqlite
+switchaudio-osx
+tcl-tk
+terraform
+terraform-docs
+terragrunt
+tesseract
+thefuck
+tidy-html5
+unbound
+unixodbc
+vault
+vde
+virtualenv
+watch
+webp
+x265
+xorgproto
+xz
+yq
+zbar
+zsh-autosuggestions
+zstd

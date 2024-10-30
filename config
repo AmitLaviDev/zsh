@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$HOME/.krew/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -171,9 +171,9 @@ source <(kubectl completion zsh)
  export LANG=en_US.UTF-8
 
 
-# ====== Aliases ====== #
- alias ohmyu="source ~/.zshrc"
- alias ohmy="code ~/.zshrc"
+# ====== General Aliases ====== #
+ alias zshu="source ~/.zshrc"
+ alias zshe="code ~/.zshrc"
  alias ipa="ip a | grep "inet ""
  alias awsiden="code ~/.aws/credentials ~/.aws/config"
  alias update="omz update"
@@ -182,32 +182,33 @@ source <(kubectl completion zsh)
  alias tfdocs="terraform-docs"
  alias python="python3"
  alias pip="pip3"
+ alias upgrade="brew upgrade"
+ alias c="clear"
 
 # === AWS SSO with GRANTED/ASSUME === #
- alias sso-login-committee='granted sso login --sso-region il-central-1 --sso-start-url https://digital-lz-il.awsapps.com/start'
- alias sso-profile-update-committee='if [ ! -d $HOME/.aws ]; then mkdir $HOME/.aws; fi; granted sso populate --prune --sso-region il-central-1 https://digital-lz-il.awsapps.com/start'
+ alias sso-login-gov='granted sso login --sso-region il-central-1 --sso-start-url https://digital-lz-il.awsapps.com/start'
+ alias sso-update-gov='if [ ! -d $HOME/.aws ]; then mkdir $HOME/.aws; fi; granted sso populate --prune --sso-region il-central-1 https://digital-lz-il.awsapps.com/start'
  alias sso-login-kyndryl='granted sso login --sso-region us-east-1 --sso-start-url https://kyndryl-aws-sso.awsapps.com/start'
- alias sso-profile-update-kyndryl='if [ ! -d $HOME/.aws ]; then mkdir $HOME/.aws; fi; granted sso populate --prune --sso-region us-east-1 https://kyndryl-aws-sso.awsapps.com/start'
+ alias sso-update-kyndryl='if [ ! -d $HOME/.aws ]; then mkdir $HOME/.aws; fi; granted sso populate --prune --sso-region us-east-1 https://kyndryl-aws-sso.awsapps.com/start'
  alias sso-connect='source assume -x'
  alias sso-connect-gui='source assume -c -x'
  alias assume="source assume"
- alias upgrade="brew upgrade"
- alias tffu="tofu force-unlock"
- alias tfsrm="tofu state rm"
- alias tfsl="tofu state list"
+
+# === Kubectl === #
  alias vtl="vault token list"
- alias c="clear"
+ alias kgpv="kubectl get pod"
  alias wkgp="watch -n0.1 kubectl get pod"
  alias wkgn="watch -n0.1 kubectl get node"
  alias wkgs="watch -n0.1 kubectl get svc"
+ alias kcv="kubectl config view"
+ alias krew="kubectl krew"
 
-# === Terraform - OpenTofu === #
+# === OpenTofu === #
 alias tf='tofu'
 alias tfa='tofu apply'
 alias tfaa='tofu apply -auto-approve'
 alias tfc='tofu console'
 alias tfd='tofu destroy'
-alias 'tfd!'='tofu destroy -auto-approve'
 alias tff='tofu fmt'
 alias tffr='tofu fmt -recursive'
 alias tfu='tofu force-unlock'
